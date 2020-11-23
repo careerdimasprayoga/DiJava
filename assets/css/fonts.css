@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'MainTheme';
+  src: url('../fonts/Rubik-VariableFont_wght.ttf');
+}
+.font-theme {
+  font-family: MainTheme;
+}
+.font-theme-c1 {
+  font-family: MainTheme;
+  color: #2675EC;
+}
+.font-theme-c2 {
+  font-family: MainTheme;
+  color: #848484;
+}
