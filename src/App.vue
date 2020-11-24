@@ -1,11 +1,27 @@
 <template>
   <div id="app">
     <router-view />
+    <LoadingScreen :isLoading="isLoading" />
   </div>
 </template>
 
 <script>
+import LoadingScreen from '@/components/animation/splashscreen.vue'
+
 export default {
+  components: {
+    LoadingScreen
+  },
+  data () {
+    return {
+      isLoading: true
+    }
+  },
+  mounted () {
+    setTimeout(() => {
+      this.isLoading = false
+    }, 3000)
+  },
   watch: {
     $route: {
       handler: (to, from) => {
