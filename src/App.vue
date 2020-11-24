@@ -4,6 +4,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  watch: {
+    $route: {
+      handler: (to, from) => {
+        document.title = to.meta.title || 'DiJava'
+      },
+      immediate: true
+    }
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

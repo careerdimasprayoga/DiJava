@@ -11,25 +11,41 @@
           <p class="text-left mt-4 font-theme-c2" style="margin-bottom: 5px">
             Name
           </p>
-          <input type="text" class="float-left font-theme customInput" />
+          <input
+            type="text"
+            class="float-left font-theme customInput"
+            placeholder="Your name"
+          />
         </b-col>
         <b-col xl="12">
           <p class="text-left mt-4 font-theme-c2" style="margin-bottom: 5px">
             Username
           </p>
-          <input type="text" class="float-left font-theme customInput" />
+          <input
+            type="text"
+            class="float-left font-theme customInput"
+            placeholder="Your unique username"
+          />
         </b-col>
         <b-col xl="12">
           <p class="text-left mt-4 font-theme-c2" style="margin-bottom: 5px">
             Phone
           </p>
-          <input type="number" class="float-left font-theme customInput" />
+          <input
+            type="number"
+            class="float-left font-theme customInput"
+            placeholder="Your phone"
+          />
         </b-col>
         <b-col xl="12">
           <p class="text-left mt-4 font-theme-c2" style="margin-bottom: 5px">
             Email
           </p>
-          <input type="email" class="float-left font-theme customInput" />
+          <input
+            type="email"
+            class="float-left font-theme customInput"
+            placeholder="Your email"
+          />
         </b-col>
         <b-col xl="12">
           <p class="text-left mt-4 font-theme-c2" style="margin-bottom: 5px">
@@ -38,15 +54,16 @@
           <input
             type="password"
             class="float-left font-theme customInput mb-4"
+            placeholder="Your password"
           />
           <p class="font-theme-c1 mt-5 text-right">Forgot password?</p>
         </b-col>
         <b-col xl="12">
           <b-button class="customButton font-theme-c1 mt-2" variant="primary">
-            Login
+            Register
           </b-button>
           <div class="mt-3 textLogin" style="">
-            <span class="font-theme-c2 textLoginSpan"> Login with </span>
+            <span class="font-theme-c2 textLoginSpan"> Register with </span>
           </div>
           <b-button
             class="customButtonGoogle font-theme-c1 mt-4"
@@ -55,7 +72,7 @@
             Google
           </b-button>
           <p class="font-theme mt-3">
-            Don't have an account? <a href="" class="font-theme-c1">Sign Up</a>
+            Already have an account? <router-link to="/login" class="font-theme-c1">Login</router-link>
           </p>
         </b-col>
       </b-row>

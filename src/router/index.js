@@ -10,12 +10,14 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: Login
+    component: Login,
+    meta: { title: 'Login' }
   },
   {
     path: '/register',
     name: 'register',
-    component: Register
+    component: Register,
+    meta: { title: 'Register' }
   },
   {
     path: '/',

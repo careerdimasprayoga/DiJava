@@ -10,7 +10,11 @@
           <p class="text-left mt-4 font-theme-c2" style="margin-bottom: 5px">
             Email
           </p>
-          <input type="email" class="float-left font-theme customInput" />
+          <input
+            type="email"
+            class="float-left font-theme customInput"
+            placeholder="Your email"
+          />
         </b-col>
         <b-col xl="12">
           <p class="text-left mt-4 font-theme-c2" style="margin-bottom: 5px">
@@ -19,6 +23,7 @@
           <input
             type="password"
             class="float-left font-theme customInput mb-4"
+            placeholder="Your password"
           />
           <p class="font-theme-c1 mt-5 text-right">Forgot password?</p>
         </b-col>
@@ -36,13 +41,23 @@
             Google
           </b-button>
           <p class="font-theme mt-3">
-            Don't have an account? <a href="" class="font-theme-c1">Sign Up</a>
+            Don't have an account? <router-link to="/register" class="font-theme-c1">Sign Up</router-link>
           </p>
         </b-col>
       </b-row>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    pageTitle: function () {
+      return this.$route.meta.title
+    }
+  }
+}
+</script>
 
 <style scoped>
 @import "../../../assets/css/fonts.css";
