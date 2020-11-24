@@ -4,7 +4,9 @@
     <div class="customCard">
       <b-row>
         <b-col xl="4">
-          <img src="@/assets/icons/left-arrow2.png" class="iconsPosition mt-1">
+          <router-link to="/login">
+            <img src="@/assets/icons/left-arrow2.png" class="iconsPosition mt-1">
+          </router-link>
         </b-col>
         <b-col xl="8">
           <h4 class="mt-1 text-left font-theme-c1">Register</h4>
@@ -108,8 +110,8 @@ export default {
   background-color: #E5E5E5;
 }
 .customCard {
-  width: 430px;
-  height: 900px;
+  max-width: 430px;
+  height: 840px;
   border-radius: 20px;
   background-color: #ffffff;
   margin: auto;
