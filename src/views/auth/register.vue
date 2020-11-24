@@ -63,7 +63,6 @@
             class="float-left font-theme customInput mb-4"
             placeholder="Your password"
           />
-          <p class="font-theme-c1 mt-5 text-right">Forgot password?</p>
         </b-col>
         <b-col xl="12">
           <b-button class="customButton font-theme mt-2" variant="primary">
