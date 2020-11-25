@@ -3,12 +3,12 @@
     <div style="height: 40px"></div>
     <div class="customCard">
       <b-row>
-        <b-col xl="4">
+        <b-col xl="4" lg="4" md="4" sm="4" cols="4">
           <router-link to="/login">
             <img src="@/assets/icons/left-arrow2.png" class="iconsPosition mt-1">
           </router-link>
         </b-col>
-        <b-col xl="8">
+        <b-col xl="8" lg="8" md="8" sm="8" cols="8">
           <h4 class="mt-1 text-left font-theme-c1">Register</h4>
         </b-col>
         <b-col xl="12">
@@ -105,7 +105,7 @@ export default {
 @import "../../assets/css/fonts.css";
 
 .wrapper {
-  height: 1000px;
+  height: 930px;
   background-color: #E5E5E5;
 }
 .customCard {

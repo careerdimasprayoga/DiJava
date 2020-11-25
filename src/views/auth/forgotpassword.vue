@@ -2,16 +2,21 @@
   <div class="wrapper">
     <div class="customCard">
       <b-row>
-        <b-col xl="3">
+        <b-col xl="3" lg="3" md="3" sm="3" cols="3">
           <router-link to="/login">
-            <img src="@/assets/icons/left-arrow2.png" class="iconsPosition mt-1">
+            <img
+              src="@/assets/icons/left-arrow2.png"
+              class="iconsPosition mt-1"
+            />
           </router-link>
         </b-col>
-        <b-col xl="9">
+        <b-col xl="9" lg="9" md="9" sm="9" cols="9">
           <h4 class="mt-1 text-left font-theme-c1">Forgot Password</h4>
         </b-col>
         <b-col xl="12">
-          <p class="text-left mt-4 font-theme">You'll get messages soon on your e-mail!</p>
+          <p class="text-left mt-4 font-theme">
+            You'll get messages soon on your e-mail!
+          </p>
         </b-col>
         <b-col xl="12">
           <p class="text-left mt-2 font-theme-c2" style="margin-bottom: 5px">
@@ -24,7 +29,7 @@
           />
         </b-col>
         <b-col xl="12">
-          <b-button class="customButton font-theme mt-5" variant="primary">
+          <b-button class="customButton font-theme mt-4" variant="primary">
             Send
           </b-button>
         </b-col>
@@ -52,16 +57,16 @@ export default {
 </script>
 
 <style scoped>
-@import "../../assets/css/fonts.css";
+@import '../../assets/css/fonts.css';
 
 .wrapper {
   height: 100vh;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   display: flex;
 }
 .customCard {
   max-width: 430px;
-  height: 360px;
+  height: 330px;
   border-radius: 20px;
   background-color: #ffffff;
   margin: auto;
@@ -77,7 +82,7 @@ export default {
   outline: none;
 }
 .customButton {
-  background-color: #2675EC;
+  background-color: #2675ec;
   border: none;
   width: 100%;
   border-radius: 30px;
@@ -85,8 +90,8 @@ export default {
 }
 .customButtonGoogle {
   background-color: white;
-  color: #2675EC;
-  border: 1px solid #2675EC;
+  color: #2675ec;
+  border: 1px solid #2675ec;
   width: 100%;
   border-radius: 30px;
   height: 50px;
@@ -106,6 +111,6 @@ export default {
 }
 .iconsPosition {
   height: 30px;
-  float: left
+  float: left;
 }
 </style>
