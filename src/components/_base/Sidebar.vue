@@ -4,7 +4,7 @@
       <h2 class="text-left mt-3 ml-2 font-brand">Di java</h2>
     </b-col>
     <b-col xl="4" md="5" sm="6" cols="5">
-      <b-button id="popover-menu" variant="transparent" class="mt-3 menu-bottom">
+      <b-button id="popover-menu" variant="transparent" class="mt-3 menu-bottom float-right">
         <img src="../../assets/icons/Menu.png" alt="Menu">
       </b-button>
       <b-popover custom-class="menu" target="popover-menu" triggers="click" placement="right">
@@ -76,14 +76,14 @@
         <div class="chat" v-for="(item, index) in chat" :key="index">
           <b-container fluid>
             <b-row>
-              <b-col xl="2">
+              <b-col xl="2" md="2" sm="1" cols="2">
                 <img src="../../assets/usersprofile.jpg" class="chat-list-image mt-2">
               </b-col>
-              <b-col xl="7">
+              <b-col xl="7" md="7" sm="8" cols="7">
                 <p class="chat-list-name mt-2">{{item.name}} <b-icon icon="bell-fill" class="color-main" font-scale="1"></b-icon></p>
                 <p class="chat-list-message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima exercitationem odit alias sequi aliquid hic amet mollitia beatae harum fugiat voluptates consequatur neque doloremque eaque dolor eius, quod facere possimus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus assumenda, a voluptatibus nemo quasi veritatis possimus placeat officia cum soluta ab adipisci deleniti rerum voluptate. Nesciunt libero sint provident nulla?</p>
               </b-col>
-              <b-col xl="3">
+              <b-col xl="3" md="3" sm="3" cols="3">
                 <p class="mt-2 chat-list-time">{{item.time}}</p>
                 <span class="chat-list-unread">6</span>
               </b-col>
@@ -273,6 +273,14 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 300px;
+}
+@media screen and (max-width: 1200px) {
+  .chat-list-message {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+  }
 }
 .chat:hover {
   background-color: #f1efef;
