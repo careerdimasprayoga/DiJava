@@ -5,7 +5,7 @@
     </b-col>
     <b-col xl="4" md="5" sm="6" cols="5">
       <b-button id="popover-menu" variant="transparent" class="mt-3 menu-bottom">
-        <img src="../../assets/icons/Menu.png" alt="">
+        <img src="../../assets/icons/Menu.png" alt="Menu">
       </b-button>
       <b-popover custom-class="menu" target="popover-menu" triggers="click" placement="right">
         <b-icon icon="lock" class="ml-3 mr-2 mb-2 menu-hover" font-scale="1.7"></b-icon>
