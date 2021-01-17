@@ -1,5 +1,8 @@
 <template>
   <div :class="{ loader: true, fadeout: !isLoading }">
+    <div class="text-center" style="margin-top: 50%;">
+      <b-spinner style="width: 3rem; height: 3rem;" label="Text Centered"></b-spinner>
+    </div>
   </div>
 </template>
 
@@ -12,7 +15,8 @@ export default {
 
 <style>
 .loader {
-  background-image: url('../../assets/icons/Splashscreen.png');
+  /* background-image: url('../../assets/icons/Splashscreen.png'); */
+  background-color: #7E98DF;
   background-position: right -200px;
   background-repeat: no-repeat;
   bottom: 0;
@@ -21,7 +25,6 @@ export default {
   font-size: 32px;
   left: 0;
   overflow: hidden;
-  padding-top: 10vh;
   position: fixed;
   right: 0;
   text-align: center;
