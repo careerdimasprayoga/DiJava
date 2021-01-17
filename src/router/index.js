@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Main from '../views/Main.vue'
 import Login from '../views/auth/login.vue'
 import Register from '../views/auth/register.vue'
 import Forgot from '../views/auth/forgotpassword.vue'
@@ -8,6 +8,10 @@ import Forgot from '../views/auth/forgotpassword.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/login'
+  },
   {
     path: '/login',
     name: 'login',
@@ -27,9 +31,10 @@ const routes = [
     meta: { title: 'Forgot Password' }
   },
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/main',
+    name: 'main',
+    component: Main,
+    meta: { title: 'Home' }
   },
   {
     path: '/about',

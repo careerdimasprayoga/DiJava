@@ -5,7 +5,8 @@
       <b-row>
         <b-col xl="4" lg="4" md="4" sm="4" cols="4">
           <router-link to="/login">
-            <img src="@/assets/icons/left-arrow2.png" class="iconsPosition mt-1">
+            <b-icon icon="chevron-double-left" class="mt-2 font-theme-c1 txt-left" font-scale="1.6"></b-icon>
+            <!-- <img src="@/assets/icons/left-arrow2.png" class="iconsPosition mt-1"> -->
           </router-link>
         </b-col>
         <b-col xl="8" lg="8" md="8" sm="8" cols="8">
