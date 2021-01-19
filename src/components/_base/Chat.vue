@@ -19,6 +19,23 @@
         </b-col>
       </div>
     </div>
+    <div class="input" style="overflow-x: hidden;">
+      <b-form>
+        <b-row>
+          <b-col xl="1" style="padding: 0px;">
+            <b-button pill variant="primary" class="float-right mt-1">
+              <b-icon icon="file-earmark" aria-hidden="true"></b-icon>
+            </b-button>
+          </b-col>
+          <b-col xl="10" style="padding: 0px">
+            <b-form-input type="text" class="mb-1 mt-1" style="width: 100%; border-radius: 30px; margin: auto;"></b-form-input>
+          </b-col>
+          <b-col xl="1" style="padding: 0px;">
+            <b-button pill variant="primary" class="float-left mt-1">Save</b-button>
+          </b-col>
+        </b-row>
+      </b-form>
+    </div>
   </div>
 </template>
 
@@ -27,9 +44,9 @@ export default {
   data () {
     return {
       chat: [
-        { image: 'gambar', name: 'Dimas', text: 'Hai Miya', time: '13.30', itsme: true },
-        { image: 'gambar', name: 'Miya', text: 'Hai Dimas', time: '24.00', itsme: false },
-        { image: 'gambar', name: 'Dimas', text: 'Tugas IPA udah ngerjain ?', time: '01.00', itsme: true },
+        { image: 'gambar', name: 'Dimas', text: 'Hai Miya Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '13.30', itsme: true },
+        { image: 'gambar', name: 'Miya', text: 'Hai Dimas Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '24.00', itsme: false },
+        { image: 'gambar', name: 'Dimas', text: 'Tugas IPA udah ngerjain ? lorem', time: '01.00', itsme: true },
         { image: 'gambar', name: 'Miya', text: 'Belum nih', time: '03.03', itsme: false },
         { image: 'gambar', name: 'Miya', text: 'Males', time: '06.03', itsme: false },
         { image: 'gambar', name: 'Dimas', text: 'Good!', time: '23.01', itsme: true },
