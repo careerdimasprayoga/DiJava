@@ -102,6 +102,7 @@ export default {
 ::-webkit-scrollbar-thumb:hover {
   background: #7e98df;
 }
+/* End scroll */
 .header {
   width: 100%;
   height: 70px;
