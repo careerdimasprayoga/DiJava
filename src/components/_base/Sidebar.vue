@@ -52,7 +52,7 @@
       </b-sidebar>
     </b-col>
     <b-col xl="12">
-      <img src="../../assets/usersprofile.jpg" class="mt-1" style="max-height: 80px; max-width: 80px; border-radius: 30px;">
+      <img src="../../assets/usersprofile.jpg" class="mt-1" style="height: 80px; width: 80px; object-fit: cover; border-radius: 30px;">
       <h4 class="mt-2">Dimas Prayoga</h4>
       <p style="margin-bottom: 0px;">@dimasu</p>
     </b-col>
@@ -77,15 +77,15 @@
           <b-container fluid>
             <b-row>
               <b-col xl="2" md="2" sm="1" cols="2">
-                <img src="../../assets/usersprofile.jpg" class="chat-list-image mt-2">
+                <img src="../../assets/usersprofile.jpg" class="chat-list-image mt-2 mr-2">
               </b-col>
               <b-col xl="7" md="7" sm="8" cols="7">
-                <p class="chat-list-name mt-2">{{item.name}} <b-icon icon="bell-fill" class="color-main" font-scale="1"></b-icon></p>
+                <p class="chat-list-name mt-2">{{item.name}} <b-icon v-if="item.important === true" icon="bell-fill" class="color-main" font-scale="1"></b-icon></p>
                 <p class="chat-list-message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima exercitationem odit alias sequi aliquid hic amet mollitia beatae harum fugiat voluptates consequatur neque doloremque eaque dolor eius, quod facere possimus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus assumenda, a voluptatibus nemo quasi veritatis possimus placeat officia cum soluta ab adipisci deleniti rerum voluptate. Nesciunt libero sint provident nulla?</p>
               </b-col>
               <b-col xl="3" md="3" sm="3" cols="3">
                 <p class="mt-2 chat-list-time">{{item.time}}</p>
-                <span class="chat-list-unread">6</span>
+                <span v-if="item.unread >= 1" class="chat-list-unread">{{item.unread}}</span>
               </b-col>
             </b-row>
           </b-container>
@@ -107,12 +107,12 @@ export default {
         { text: 'Unread', value: 'unread' }
       ],
       chat: [
-        { picture: '', name: 'Dimas', time: '20:50' },
-        { picture: '', name: 'Fatah', time: '30:50' },
-        { picture: '', name: 'Razip', time: '20:10' },
-        { picture: '', name: 'Yanti', time: '10:50' },
-        { picture: '', name: 'Ibnu', time: '14:50' },
-        { picture: '', name: 'Aru;', time: '12:50' }
+        { picture: '', name: 'Dimas', time: '20:50', important: true, unread: 5 },
+        { picture: '', name: 'Fatah', time: '30:30', important: false, unread: 0 },
+        { picture: '', name: 'Razip', time: '20:23', important: true, unread: 3 },
+        { picture: '', name: 'Yanti', time: '23:57', important: true, unread: 0 },
+        { picture: '', name: 'Ibnu', time: '14:31', important: false, unread: 10 },
+        { picture: '', name: 'Aru;', time: '12:35', important: true, unread: 0 }
       ],
       popoverShow: false
     }
@@ -241,9 +241,10 @@ export default {
   border-radius: 15px;
 }
 .chat-list-image {
-  max-width: 50px;
-  max-height: 50px;
+  width: 46px;
+  height: 46px;
   border-radius: 15px;
+  object-fit: cover;
 }
 .chat-list-name {
   font-weight: bold;

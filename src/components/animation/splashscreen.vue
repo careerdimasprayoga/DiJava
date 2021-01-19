@@ -1,7 +1,8 @@
 <template>
   <div :class="{ loader: true, fadeout: !isLoading }">
-    <div class="text-center" style="margin-top: 50%;">
-      <b-spinner style="width: 3rem; height: 3rem;" label="Text Centered"></b-spinner>
+    <div class="text-center" style="margin-top: 45vh;">
+      <b-spinner style="width: 3rem; height: 3rem; color: white;" label="Text Centered"></b-spinner>
+      <h5 class="mt-3">Loading..</h5>
     </div>
   </div>
 </template>
@@ -29,6 +30,7 @@ export default {
   right: 0;
   text-align: center;
   top: 0;
+  width: 100%;
 }
 
 .fadeout {
