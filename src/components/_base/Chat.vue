@@ -7,14 +7,16 @@
     </div>
     <div class="chat">
       <div v-for="(item, index) in chat" :key="index" class="row">
-        <b-col xl="12">
-          <div class="receiver mt-2" v-if="item.itsme===false">
+        <b-col xl="auto" v-if="item.itsme===false">
+          <div class="receiver mt-2">
             <div class="text">{{item.text}}</div>
-            <div class="footer">15.30</div>
+            <div class="footer-receive">15.30</div>
           </div>
-          <div class="sender mt-2" v-else>
+        </b-col>
+        <b-col xl="12" v-else>
+          <div class="sender mt-2">
             <div class="text">{{item.text}}</div>
-            <div class="footer" style="color: black;">12.50</div>
+            <div class="footer-sender" style="color: black;">12.50</div>
           </div>
         </b-col>
       </div>
@@ -73,8 +75,8 @@ export default {
 .receiver {
   max-width: 80vh;
   height: auto;
-  padding: 15px;
-  padding-left: 20px;
+  padding: 10px;
+  padding-bottom: 15px;
   text-align: left;
   margin-left: 20px;
   background-color: #7E98DF;
@@ -88,7 +90,7 @@ export default {
   max-width: 80vh;
   height: auto;
   float: right;
-  padding: 15px;
+  padding: 10px;
   padding-left: 20px;
   text-align: left;
   margin-right: 20px;
@@ -98,12 +100,19 @@ export default {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.footer {
+.footer-sender{
   float: right;
   font-size: 13px;
   color: rgb(238, 238, 238);
-  margin-right: -10px;
-  margin-bottom: -10px;
+  margin-right: -5px;
+  margin-bottom: -5px;
+}
+.footer-receive {
+  float: right;
+  font-size: 13px;
+  color: rgb(238, 238, 238);
+  margin-top: -5px;
+  margin-right: -6px;
 }
 /* List Start */
 ::-webkit-scrollbar {
