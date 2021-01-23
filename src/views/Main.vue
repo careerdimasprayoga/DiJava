@@ -4,7 +4,7 @@
       <b-col xl="3" md="5" sm="12" style="background-color: #ffffff;">
         <Side />
       </b-col>
-      <b-col xl="9" md="7" sm="0" style="background-color: #fafafa; padding: 0; overflow-y: hidden;">
+      <b-col xl="9" md="7" class="d-none d-sm-block, d-sm-none d-md-block" style="background-color: #fafafa; padding: 0; overflow-y: hidden;">
         <Chat />
       </b-col>
     </b-row>

@@ -67,7 +67,7 @@ export default {
     },
     sendChat () {
       const dates = new Date()
-      const dateTime = this.addZero(dates.getHours()) + ':' + dates.getMinutes()
+      const dateTime = this.addZero(dates.getHours()) + ':' + this.addZero(dates.getMinutes())
       const sendMessage = { image: 'gambar', name: 'Dimas', text: this.chatInput, time: dateTime, itsme: true }
       this.chat.push(sendMessage)
       console.log(sendMessage)
