@@ -7,7 +7,7 @@
       <b-button id="popover-menu" variant="transparent" class="mt-3 menu-bottom float-right">
         <img src="../../assets/icons/Menu.png" alt="Menu">
       </b-button>
-      <b-popover custom-class="menu" target="popover-menu" triggers="click" placement="right">
+      <b-popover custom-class="menu" target="popover-menu" triggers="focus" placement="right">
         <b-icon icon="lock" class="ml-3 mr-2 mb-2 menu-hover" font-scale="1.7"></b-icon>
         <!-- v-b-toggle.my-profile -->
         <b-icon icon="gear" class="ml-2 mr-2 mt-2 mb-2 menu-hover" font-scale="1.7" id="popover-seting"></b-icon> <!-- focus -->
@@ -29,10 +29,11 @@
             <b-row>
               <b-col xl="12">
                 <div class="close-profile pointer mb-3">
-                  <b-icon icon="x-circle" style="margin-top: 7px;" font-scale="1.7" v-b-toggle.my-profile></b-icon><br>
+                  <b-icon icon="arrow-bar-left" style="margin-top: 7px;" font-scale="1.7" v-b-toggle.my-profile></b-icon>
                 </div>
               </b-col>
               <b-col xl="12">
+                <img src="../../assets/usersprofile.jpg" style="height: 100px; width: 100px; object-fit: cover; border-radius: 30px;">
                 <p>
                   Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
                   in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
@@ -293,7 +294,7 @@ export default {
 .close-profile {
   float: right;
   margin-top: 17px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   background-color: #7e98df;
   width: 40px;
   height: 41.2344px;

@@ -16,13 +16,13 @@
         <b-col xl="12" v-else>
           <div class="sender mt-2">
             <div class="text">{{item.text}}</div>
-            <div class="footer-sender" style="color: black;">12.50</div>
+            <div class="footer-sender" style="color: black;">{{item.time}}</div>
           </div>
         </b-col>
       </div>
     </div>
     <div class="input" style="overflow-x: hidden;">
-      <b-form>
+      <b-form @submit.prevent="sendChat()">
         <b-row>
           <b-col xl="1" style="padding: 0px;">
             <b-button pill variant="primary" class="float-right mt-1">
@@ -30,7 +30,7 @@
             </b-button>
           </b-col>
           <b-col xl="10" style="padding: 0px">
-            <b-form-input type="text" class="mb-1 mt-1" style="width: 100%; border-radius: 30px; margin: auto;"></b-form-input>
+            <b-form-input type="text" v-model="chatInput" class="mb-1 mt-1" style="width: 100%; border-radius: 30px; margin: auto;"></b-form-input>
           </b-col>
           <b-col xl="1" style="padding: 0px;">
             <b-button pill variant="primary" class="float-left mt-1">Save</b-button>
@@ -45,17 +45,33 @@
 export default {
   data () {
     return {
+      chatInput: '',
       chat: [
-        { image: 'gambar', name: 'Dimas', text: 'Hai Miya Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '13.30', itsme: true },
-        { image: 'gambar', name: 'Miya', text: 'Hai Dimas Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '24.00', itsme: false },
-        { image: 'gambar', name: 'Dimas', text: 'Tugas IPA udah ngerjain ? lorem', time: '01.00', itsme: true },
-        { image: 'gambar', name: 'Miya', text: 'Belum nih', time: '03.03', itsme: false },
-        { image: 'gambar', name: 'Miya', text: 'Males', time: '06.03', itsme: false },
-        { image: 'gambar', name: 'Dimas', text: 'Good!', time: '23.01', itsme: true },
-        { image: 'gambar', name: 'Miya', text: 'Kok good sih', time: '21.01', itsme: false },
-        { image: 'gambar', name: 'Dimas', text: 'Biar sama2 gak ngerjain', time: '12.01', itsme: true },
-        { image: 'gambar', name: 'Dimas', text: 'wkwkwkwk', time: '01.01', itsme: true }
+        { text: 'Hai Miya Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '13.30', itsme: true },
+        { text: 'Hai Dimas Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '24.00', itsme: false },
+        { text: 'Tugas IPA udah ngerjain ? lorem', time: '01.00', itsme: true },
+        { text: 'Belum nih', time: '03.03', itsme: false },
+        { text: 'Males', time: '06.03', itsme: false },
+        { text: 'Good!', time: '23.01', itsme: true },
+        { text: 'Kok good sih', time: '21.01', itsme: false },
+        { text: 'Biar sama2 gak ngerjain', time: '12.01', itsme: true },
+        { text: 'wkwkwkwk', time: '01.01', itsme: true },
+        { text: 'testing testing test sets set set', time: '21.01', itsme: false }
       ]
+    }
+  },
+  methods: {
+    addZero (i) {
+      if (i < 10) { i = '0' + i }
+      return i
+    },
+    sendChat () {
+      const dates = new Date()
+      const dateTime = this.addZero(dates.getHours()) + ':' + dates.getMinutes()
+      const sendMessage = { image: 'gambar', name: 'Dimas', text: this.chatInput, time: dateTime, itsme: true }
+      this.chat.push(sendMessage)
+      console.log(sendMessage)
+      this.chatInput = ''
     }
   }
 }
