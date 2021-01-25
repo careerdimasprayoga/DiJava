@@ -21,10 +21,10 @@
           <div class="sender mt-2">
             <div class="text">{{item.text}}</div>
             <div class="footer-sender" style="color: black;">{{item.time}}</div>
-            <b-icon icon="clock" v-if="item.readStatus === 0" aria-hidden="true"></b-icon>
-            <b-icon icon="check2" v-else-if="item.readStatus === 1" aria-hidden="true"></b-icon>
-            <b-icon icon="check2-all" v-else-if="item.readStatus === 2" aria-hidden="true"></b-icon>
-            <b-icon icon="check2-all" v-else-if="item.readStatus === 3" aria-hidden="true" style="color: #7e98df"></b-icon>
+            <b-icon icon="clock" class="mr-2" v-if="item.readStatus === 0" aria-hidden="true" font-scale="1"></b-icon>
+            <b-icon icon="check2" class="mr-2" v-else-if="item.readStatus === 1" aria-hidden="true"></b-icon>
+            <b-icon icon="check2-all" class="mr-2" v-else-if="item.readStatus === 2" aria-hidden="true"></b-icon>
+            <b-icon icon="check2-all" class="mr-2" v-else-if="item.readStatus === 3" aria-hidden="true" style="color: #7e98df"></b-icon>
           </div>
         </b-col>
       </div>
@@ -32,16 +32,16 @@
     <div class="input" style="overflow-x: hidden;">
       <b-form @submit.prevent="sendChat()">
         <b-row>
-          <b-col xl="1" style="padding: 0px;">
-            <b-button pill variant="primary" class="float-right mt-1">
+          <b-col xl="1" md="1" sm="1" cols="1" style="padding: 0px;">
+            <b-button pill variant="primary" class="float-right mt-1 mr-2">
               <b-icon icon="file-earmark" aria-hidden="true"></b-icon>
             </b-button>
           </b-col>
-          <b-col xl="10" style="padding: 0px">
+          <b-col xl="10" md="10" sm="10" cols="10" style="padding: 0px">
             <b-form-input type="text" v-model="chatInput" class="mb-1 mt-1" style="width: 100%; border-radius: 30px; margin: auto;"></b-form-input>
           </b-col>
-          <b-col xl="1" style="padding: 0px;">
-            <b-button pill variant="primary" class="float-left mt-1">Save</b-button>
+          <b-col xl="1" md="1" sm="1" cols="1" style="padding: 0px;">
+            <b-button pill variant="primary" class="float-left mt-1 ml-2">Save</b-button>
           </b-col>
         </b-row>
       </b-form>
@@ -115,8 +115,8 @@ export default {
   max-width: 80vh;
   height: auto;
   float: right;
-  padding: 10px;
-  padding-left: 20px;
+  padding: 10px 10px 0 10px;
+  /* padding-left: 20px; */
   text-align: left;
   margin-right: 20px;
   background-color: #ffffff;

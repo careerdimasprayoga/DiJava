@@ -24,28 +24,28 @@
       </b-popover>
       <!-- SideBar -->
       <b-sidebar id="my-profile" width="340px" bg-variant="white" aria-labelledby="my-profile" no-header shadow>
-        <template #default="{ hide }">
+        <template>
           <b-container>
             <b-row>
-              <b-col xl="12">
-                <div class="close-profile pointer mb-3">
-                  <b-icon icon="arrow-bar-left" style="margin-top: 7px;" font-scale="1.7" v-b-toggle.my-profile></b-icon>
+              <b-col xl="2" md="2" sm="2" cols="2" class="align-self-center mt-3 mb-4">
+                <div class="close-profile pointer float-right">
+                  <b-icon icon="chevron-left" style="margin-top: 7px;" font-scale="1.5" v-b-toggle.my-profile></b-icon>
                 </div>
               </b-col>
-              <b-col xl="12">
+              <b-col xl="8" md="8" sm="8" cols="8" class="align-self-center mt-3 mb-4">
+                <h5 style="margin: 0; color: #7E98DF">@dimasu</h5>
+              </b-col>
+              <b-col xl="12" md="12" sm="12" cols="12">
                 <img src="https://randomuser.me/api/portraits/men/1.jpg" style="height: 100px; width: 100px; object-fit: cover; border-radius: 30px;">
-                <p>
-                  Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-                  in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                </p>
-                <nav class="mb-3">
-                  <b-nav vertical>
-                    <b-nav-item active @click="hide">Active</b-nav-item>
-                    <b-nav-item href="#link-1" @click="hide">Link</b-nav-item>
-                    <b-nav-item href="#link-2" @click="hide">Another Link</b-nav-item>
-                  </b-nav>
-                </nav>
-                <b-button variant="primary" block @click="hide">Close Sidebar</b-button>
+              </b-col>
+              <b-col xl="12" md="12" sm="12" cols="12" class="mt-4">
+                <h5 class="font-weight-bold">Dimas Prayoga</h5>
+                <h6 style="color: #848484;">@dimasu</h6>
+              </b-col>
+              <b-col xl="12" md="12" sm="12" cols="12" class="mt-4 text-left">
+                <h5 style="font-size: 18px; font-weight: bold">Account</h5>
+                <h6 class="mt-3">(+62) 85697975214</h6>
+                <h6 style="color: #7E98DF">Tap to change phone number</h6>
               </b-col>
             </b-row>
           </b-container>
@@ -293,14 +293,7 @@ export default {
 
 /* My profile Start */
 .close-profile {
-  float: right;
-  margin-top: 17px;
-  /* margin-right: 50px; */
-  background-color: #7e98df;
-  width: 40px;
-  height: 41.2344px;
-  border-radius: 30px;
-  color: #ffffff;
+  color: #7E98DF;
 }
 #my-profile{
   width: 100px !important;
