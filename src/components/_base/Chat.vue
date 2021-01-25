@@ -1,9 +1,13 @@
 <template>
   <div>
     <div class="header">
-      <img src="../../assets/usersprofile.jpg" style="width: 50px; height: 50px; border-radius: 20px; object-fit: cover; margin-top: 10px; float: left; margin-left: 30px;">
-      <h5 style="float: left; margin-left: 15px; margin-top: 10px;">Dimas</h5><br>
-      <h6 style="float: left; margin-top: 15px; margin-left: -57px; color: #7e98df;">online</h6>
+      <img src="https://randomuser.me/api/portraits/women/51.jpg" style="width: 50px; height: 50px; border-radius: 20px; object-fit: cover; margin-top: 10px; float: left; margin-left: 30px;">
+      <div class="head" style="width: 200px; height: 70px; text-align: left; margin-left: 90px; position: absolute;">
+        <h5 style="margin-top: 17px; line-height: 13px">Maria</h5>
+        <h6 style="color: #7e98df;">online</h6>
+      </div>
+      <!-- <h5 style="float: left; margin-left: 15px; margin-top: 10px;">Dimas</h5><br>
+      <h6 style="float: left; margin-top: 15px; margin-left: -57px; color: #7e98df;">online</h6> -->
     </div>
     <div class="chat">
       <div v-for="(item, index) in chat" :key="index" class="row">
@@ -17,6 +21,10 @@
           <div class="sender mt-2">
             <div class="text">{{item.text}}</div>
             <div class="footer-sender" style="color: black;">{{item.time}}</div>
+            <b-icon icon="clock" v-if="item.readStatus === 0" aria-hidden="true"></b-icon>
+            <b-icon icon="check2" v-else-if="item.readStatus === 1" aria-hidden="true"></b-icon>
+            <b-icon icon="check2-all" v-else-if="item.readStatus === 2" aria-hidden="true"></b-icon>
+            <b-icon icon="check2-all" v-else-if="item.readStatus === 3" aria-hidden="true" style="color: #7e98df"></b-icon>
           </div>
         </b-col>
       </div>
@@ -47,16 +55,16 @@ export default {
     return {
       chatInput: '',
       chat: [
-        { text: 'Hai Miya Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '13.30', itsme: true },
-        { text: 'Hai Dimas Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '24.00', itsme: false },
-        { text: 'Tugas IPA udah ngerjain ? lorem', time: '01.00', itsme: true },
-        { text: 'Belum nih', time: '03.03', itsme: false },
-        { text: 'Males', time: '06.03', itsme: false },
-        { text: 'Good!', time: '23.01', itsme: true },
-        { text: 'Kok good sih', time: '21.01', itsme: false },
-        { text: 'Biar sama2 gak ngerjain', time: '12.01', itsme: true },
-        { text: 'wkwkwkwk', time: '01.01', itsme: true },
-        { text: 'testing testing test sets set set', time: '21.01', itsme: false }
+        { text: 'Hai Miya Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '13.30', itsme: true, readStatus: 3 },
+        { text: 'Hai Dimas Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error cum, consequuntur recusandae excepturi aspernatur quidem velit sed aliquid veritatis? Fugiat enim culpa laborum asperiores facilis cum dolore, molestiae commodi!', time: '24.00', itsme: false, readStatus: 3 },
+        { text: 'Tugas IPA udah ngerjain ? lorem', time: '01.00', itsme: true, readStatus: 3 },
+        { text: 'Belum nih', time: '03.03', itsme: false, readStatus: 3 },
+        { text: 'Males', time: '06.03', itsme: false, readStatus: 3 },
+        { text: 'Good!', time: '23.01', itsme: true, readStatus: 1 },
+        { text: 'Kok good sih', time: '21.01', itsme: false, readStatus: 3 },
+        { text: 'Biar sama2 gak ngerjain', time: '12.01', itsme: 3, readStatus: 3 },
+        { text: 'wkwkwkwk', time: '01.01', itsme: true, readStatus: 2 },
+        { text: 'testing testing test sets set set', time: '21.01', itsme: false, readStatus: 1 }
       ]
     }
   },
@@ -66,9 +74,10 @@ export default {
       return i
     },
     sendChat () {
+      // Status chat : 0 me offline (time clock), 1 friend offline (check 1), 2 message terkirim (check 2), 2 message read (check 2 blue)
       const dates = new Date()
       const dateTime = this.addZero(dates.getHours()) + ':' + this.addZero(dates.getMinutes())
-      const sendMessage = { image: 'gambar', name: 'Dimas', text: this.chatInput, time: dateTime, itsme: true }
+      const sendMessage = { image: 'gambar', name: 'Dimas', text: this.chatInput, time: dateTime, itsme: true, readStatus: 0 }
       this.chat.push(sendMessage)
       console.log(sendMessage)
       this.chatInput = ''
