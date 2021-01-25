@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <img src="https://randomuser.me/api/portraits/women/51.jpg" style="width: 50px; height: 50px; border-radius: 20px; object-fit: cover; margin-top: 10px; float: left; margin-left: 30px;">
+      <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="" style="width: 50px; height: 50px; border-radius: 20px; object-fit: cover; margin-top: 10px; float: left; margin-left: 30px;">
       <div class="head" style="width: 200px; height: 70px; text-align: left; margin-left: 90px; position: absolute;">
         <h5 style="margin-top: 17px; line-height: 13px">Maria</h5>
         <h6 style="color: #7e98df;">online</h6>

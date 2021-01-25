@@ -36,7 +36,7 @@
                 <h5 style="margin: 0; color: #7E98DF">@dimasu</h5>
               </b-col>
               <b-col xl="12" md="12" sm="12" cols="12">
-                <img src="https://randomuser.me/api/portraits/men/1.jpg" style="height: 100px; width: 100px; object-fit: cover; border-radius: 30px;">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt style="height: 100px; width: 100px; object-fit: cover; border-radius: 30px;">
               </b-col>
               <b-col xl="12" md="12" sm="12" cols="12" class="mt-4">
                 <h5 class="font-weight-bold">Dimas Prayoga</h5>
@@ -53,7 +53,7 @@
       </b-sidebar>
     </b-col>
     <b-col xl="12">
-      <img src="https://randomuser.me/api/portraits/men/1.jpg" class="mt-1" style="height: 80px; width: 80px; object-fit: cover; border-radius: 30px;">
+      <img src="https://randomuser.me/api/portraits/men/1.jpg" class="mt-1" style="height: 80px; width: 80px; object-fit: cover; border-radius: 30px;" alt="">
       <h4 class="mt-2">Dimas Prayoga</h4>
       <p style="margin-bottom: 0px;">@dimasu</p>
     </b-col>
@@ -78,7 +78,7 @@
           <b-container fluid>
             <b-row>
               <b-col xl="2" md="2" sm="1" cols="2">
-                <img v-bind:src="dummyImage + index + '.jpg'" class="chat-list-image mt-2 mr-2">
+                <img v-bind:src="dummyImage + index + '.jpg'" class="chat-list-image mt-2 mr-2" alt="">
               </b-col>
               <b-col xl="7" md="7" sm="8" cols="7">
                 <p class="chat-list-name mt-2">{{item.name}} <b-icon v-if="item.important === true" icon="bell-fill" class="color-main" font-scale="1"></b-icon></p>

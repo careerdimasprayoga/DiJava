@@ -20,7 +20,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.isLoading = false
-    }, 3000)
+    })
   },
   watch: {
     $route: {
